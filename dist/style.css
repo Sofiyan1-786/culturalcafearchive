@@ -6,6 +6,22 @@ html {
   font-family: "Montserrat", "HelveticaNeueLTStd", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.5;
 }
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-title {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #2c74bc;
+  font-family: 'sedan-sc-regular';
+  font-size: 3.em;
+  margin-bottom: 2px;
+  box-shadow: -11px -20px 4px rgba(224, 120, 120, 0.1);
+}
 
 .fadein {
   opacity: 0;
@@ -13,6 +29,37 @@ html {
 }
 .fadein.lazyloaded {
   opacity: 1;
+}
+/* Mobile devices */
+@media (max-width: 600px) {
+  .gallery-item {
+    width: 100%;
+  }
+}
+
+/* Tablet devices */
+@media (min-width: 601px) and (max-width: 900px) {
+  .gallery-item {
+    width: 50%;
+  }
+}
+
+/* Desktop devices */
+@media (min-width: 901px) {
+  .gallery-item {
+    width: 33.33%;
+  }
+}
+
+.gallery-item {
+  float: left;
+}
+
+/* Clear floats after image containers */
+.imageContainer::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .blur-up {
@@ -42,9 +89,9 @@ html {
 }
 
 ::selection {
-  color: white;
-  background: black;
-  text-shadow: none;
+  /* color: white; */
+  /* background: black; */
+  /* text-shadow: none; */
 }
 
 .custom-background:after {
